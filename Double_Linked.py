@@ -72,8 +72,15 @@ class Double_Linked:
         self.head = self.head.next
         self.prev = None
 
+    def del_end(self):
+        """if the list has 1 element delete that, otherwise iterate through the list"""
+        if self.head.next is None:
+            print(f"Nothing in the list")
+            return
+        if self.head.next is None:
+            self.head.next = None
+            return
+
     """methods that I need to add in"""
     # def Delete_curr(self, data):
-
-    # def Delete_last(self, data):
     # def Mod_node(self, data):
