@@ -82,5 +82,8 @@ class Double_Linked:
             return
 
     """methods that I need to add in"""
-    # def Delete_curr(self, data):
-    # def Mod_node(self, data):
+    # find a node based on the data contained in it
+    """search the list and return the position of the variable that was found. for loop and count the numbers until a position is hit and add it to the counter"""
+
+    def find_node(self, data):
+        """iterates through the list and finds every position that has that data in it."""
