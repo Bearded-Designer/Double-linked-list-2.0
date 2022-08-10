@@ -119,12 +119,12 @@ class Double_Linked:
             last = last.prev
 
 
-dlist = Double_Linked()
-dlist.insert_before(10)
-dlist.insert_at_end(8)
+# dlist = Double_Linked()
+# dlist.insert_before(10)
+# dlist.insert_at_end(8)
 # dlist.insert_after(dlist.head.next, 19)
 # dlist.insert_at_end(10)
 
 # print(dlist.traverse_list)
-dlist.find_node(10)
-dlist.printList(dlist.head)
+# dlist.find_node(10)
+# dlist.printList(dlist.head)
