@@ -85,5 +85,22 @@ class Double_Linked:
     # find a node based on the data contained in it
     """search the list and return the position of the variable that was found. for loop and count the numbers until a position is hit and add it to the counter"""
 
-    def find_node(self, data):
+    def find_node(self, value):
         """iterates through the list and finds every position that has that data in it."""
+        n = 1
+        flag = False
+
+        if self.head == None:
+            print(f"list is empty")
+            return
+
+        while self.head != None:
+            if self.head.data == value:
+                flag = True
+                break
+            self.head = self.head.next
+            n = n + 1
+        if flag:
+            print(f"data is present in the list at position " + n)
+        else:
+            print(f"data is not present in the string")
