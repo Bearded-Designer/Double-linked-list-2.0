@@ -38,15 +38,17 @@ class Double_Linked:
 
     def insert_after(self, prev_node, new_data):
         """adds data in the middle of the list"""
-        try:
+        if prev_node is None:
+            print(f"This node does not exist")
+            return
 
-            new_node = Node(new_data)
-            prev_node = new_node
-            new_node.next = prev_node.next
-            new_node.prev = prev_node
+        new_node = Node(new_data)
+        prev_node = new_node
+        new_node.next = prev_node.next
+        new_node.prev = prev_node
 
-        except Exception as e:
-            print(e)
+        if new_node.next is not None:
+            new_node.next.prev = new_node
 
     def insert_at_end(self, data):
 
