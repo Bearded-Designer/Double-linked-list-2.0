@@ -101,6 +101,30 @@ class Double_Linked:
             self.head = self.head.next
             n = n + 1
         if flag:
-            print(f"data is present in the list at position " + n)
+            print(f"data is present in the list at position " + str(n))
         else:
             print(f"data is not present in the string")
+
+    def printList(self, node):
+
+        print("\nTraversal in forward direction")
+        while node:
+            print(" {}".format(node.data))
+            last = node
+            node = node.next
+
+        print("\nTraversal in reverse direction")
+        while last:
+            print(" {}".format(last.data))
+            last = last.prev
+
+
+dlist = Double_Linked()
+dlist.insert_before(10)
+dlist.insert_at_end(8)
+# dlist.insert_after(dlist.head.next, 19)
+# dlist.insert_at_end(10)
+
+# print(dlist.traverse_list)
+dlist.find_node(10)
+dlist.printList(dlist.head)
