@@ -50,14 +50,6 @@ class Double_Linked:
         if new_node.next is not None:
             new_node.next.prev = new_node
 
-    def insert_at_end(self, data):
-
-        if self.head is None:
-            new_node = Node(data)
-            self.head = new_node
-            return
-        end = self.head
-
     def traverse_list(self):
 
         n = self.head
